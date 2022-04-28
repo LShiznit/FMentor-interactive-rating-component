@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass&display=swap');
+
+:root {
+  --primary: hsl(25, 97%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(217, 12%, 63%);
+  --medium-grey: hsl(216, 12%, 54%);
+  --dark-blue: hsl(213, 19%, 18%);
+  --vdark-blue: hsl(216, 11.6%, 8.4%);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Overpass';
+  background-color: var(--vdark-blue);
+  color: var(--white);
+}
+
+p {
+  font-size: 15px;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-container {
+  width: 416px;
+  height: 412px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--dark-blue);
+  border-radius: 30px;
+}
+
+.card-content {
+  width: 100%;
+  height: 100%;
+  /* display: flex; */
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+#initial-rate {
+  display: flex;
+}
+
+#final-rate {
+  display: none;
+}
+
+.card-content .circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: hsla(213, 19%, 28%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-content > p {
+  opacity: 70%;
+}
+
+/* RATING SELECTIONS */
+.rating-selection {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rate-selection {
+  opacity: 60%;
+}
+
+.rate-selection.active {
+  background-color: var(--medium-grey);
+  opacity: unset;
+  text-color: var(--white);
+}
+
+.rate-selection:hover {
+  background-color: var(--primary);
+  opacity: unset;
+  color: var(--white);
+}
+
+/* SUBMIT BUTTON */
+.submit {
+  height: 48px;
+  background-color: var(--primary);
+  border-radius: 24px;
+  position: relative;
+  font-weight: 700;
+}
+
+.submit:hover {
+  background-color: var(--white);
+  color: var(--primary);
+}
+.submit:active {
+  background-color: var(--light-grey);
+  color: var(--white);
+}
+
+.submit p {
+  position: absolute;
+  top: calc(50% - 9.5px);
+  left: calc(50% - 27px);
+}
+
+/* STYLING THANK YOU 'FINAL RATE' */
+#final-rate > img {
+  width: 162px;
+  height: 108px;
+}
+
+#final-rate.card-content {
+  align-items: center;
+  padding: 2.5rem;
+}
+
+#final-rate > p {
+  text-align: center;
+}
+
+.display-result {
+  color: var(--primary);
+  background-color: hsla(213, 19%, 28%);
+  padding: 0.5rem 1.5rem;
+  margin-top: 1.5rem;
+  border-radius: 20px;
+}
+
+#final-rate > h1 {
+  margin-top: 2.5rem;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  font-display: ;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* 
+## Layout
+- Mobile: 375px
+- Desktop: 1440px
+*/
